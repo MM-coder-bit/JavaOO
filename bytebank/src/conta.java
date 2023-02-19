@@ -31,4 +31,17 @@ public class conta
         }
     }
 
+    // Método transfere
+    // recebe valor e variavel da conta destino
+    public boolean transfere(double valor,conta destino)
+    {
+        if (this.saldo >= valor)
+        {
+            this.saldo -= valor;
+            destino.deposita(valor); // chama método deposita()
+            return true;
+        }
+        return false;
+    }
+
 }
