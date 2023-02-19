@@ -12,8 +12,23 @@ public class conta
     
     // Método deposita
     // Função que atribui o valor no 'saldo' da classe principal 
+    // quando o método tem o void, significa que não tem retorno
     public void deposita(double valor)
     {
-        this.saldo = this.saldo + valor; // use o this para referenciar o método em questão
+        this.saldo += valor; // use o this para referenciar o método em questão
     }
+
+    // Método Saca
+    public boolean saca(double valor)
+    {
+        if (this.saldo >= valor) // Valor é menor que saldo?
+        {
+            this.saldo -= valor; // decrementa do saldo
+            return true;    
+        }else
+        {
+            return false;
+        }
+    }
+
 }
