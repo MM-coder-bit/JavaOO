@@ -3,7 +3,7 @@ public class testeGetESet
     public static void main(String[] args) 
     {
         // cria conta
-        conta contaTeste = new conta();
+        conta contaTeste = new conta(123,3455);
         contaTeste.setNumero(137);
         System.out.println(contaTeste.getNumero());
         // cria cliente
