@@ -9,12 +9,15 @@ public class conta
     private int agencia;
     private int numero;
     private cliente titular;  // a definição vem da classe cliente() - uma classe chamando outra
-    
+    private static int total; // variavel da classe e não do objeto, 'static = da Classe'
+
     //------------------------------------------------------------------------------------------------//
     // Construtor
     // rotina de inicialização
     public conta(int agencia, int numero) // obriga que na construção do objeto seja incluida a ag. e conta.
     {
+        conta.total++; // incrementa toda vez que a classe conta() é criada
+        //System.out.println("O total de contas abertas são:" + conta.total);
         this.agencia = agencia; // recebendo do construtor e enviando para ESTE(this) objeto.
         this.numero = numero;
         System.out.println("Agencia:" + this.agencia + '\n' + "Numero:" + this.numero);
@@ -95,5 +98,14 @@ public class conta
     public void setTitular(cliente titular) 
     {
         this.titular = titular;
+    }
+
+    //-----------------------------------------//
+    // Quantidade de contas existentes
+    // Get() da classe
+    // entre grande ASPAS "" o static seria um var global
+    public static int getTotal()
+    {
+        return conta.total;
     }
 }
