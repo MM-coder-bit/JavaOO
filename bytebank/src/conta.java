@@ -5,10 +5,10 @@
  // esta conta possui 4 atributos
 public class conta
 {
-    double saldo;
+    private double saldo; // atributo privado
     int agencia;
     int numero;
-    String titular;  
+    cliente titular;  // a definição vem da classe cliente() - uma classe chamando outra
     
     // Método deposita
     // Função que atribui o valor no 'saldo' da classe principal 
@@ -42,6 +42,12 @@ public class conta
             return true;
         }
         return false;
+    }
+
+    // retorna saldo
+    public double pegaSaldo()
+    {
+        return this.saldo;
     }
 
 }
