@@ -10,6 +10,16 @@ public class conta
     private int numero;
     private cliente titular;  // a definição vem da classe cliente() - uma classe chamando outra
     
+    //------------------------------------------------------------------------------------------------//
+    // Construtor
+    // rotina de inicialização
+    public conta(int agencia, int numero) // obriga que na construção do objeto seja incluida a ag. e conta.
+    {
+        this.agencia = agencia; // recebendo do construtor e enviando para ESTE(this) objeto.
+        this.numero = numero;
+        System.out.println("Agencia:" + this.agencia + '\n' + "Numero:" + this.numero);
+    }
+    //------------------------------------------------------------------------------------------------//
     // Método deposita
     // Função que atribui o valor no 'saldo' da classe principal 
     // quando o método tem o void, significa que não tem retorno
