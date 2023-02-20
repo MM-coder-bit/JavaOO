@@ -6,9 +6,9 @@
 public class conta
 {
     private double saldo; // atributo privado
-    int agencia;
-    int numero;
-    cliente titular;  // a definição vem da classe cliente() - uma classe chamando outra
+    private int agencia;
+    private int numero;
+    private cliente titular;  // a definição vem da classe cliente() - uma classe chamando outra
     
     // Método deposita
     // Função que atribui o valor no 'saldo' da classe principal 
@@ -44,10 +44,46 @@ public class conta
         return false;
     }
 
-    // retorna saldo
-    public double pegaSaldo()
+    // Retorna saldo
+    // Get()
+    public double getSaldo()
     {
         return this.saldo;
     }
-
+    //-----------------------------------------//
+    // Numero da conta
+    // Get()
+    public int getNumero()
+    {
+        return this.numero;
+    }
+    // Set()
+    public void setNumero(int Numero)
+    {
+        this.numero = Numero;
+    }
+    //-----------------------------------------//
+    // Numero da agência
+    // Get()
+    public int getAgencia()
+    {
+        return this.agencia;
+    }
+    //Set()
+    public void setAgencia(int agencia) 
+    {
+        this.agencia = agencia;
+    }
+    //-----------------------------------------//
+    // Nome do Titular
+    // Get()
+    public cliente getTitular() 
+    {
+        return titular;
+    }
+    // Set()
+    public void setTitular(cliente titular) 
+    {
+        this.titular = titular;
+    }
 }
